@@ -2,7 +2,7 @@ from os import environ
 from pyrogram import Client, filters
 from pyrogram.types import ChatJoinRequest
 
-bot=Client("Automatic approve bot", bot_token = environ["BOT_TOKEN"], api_id = int(environ["API_ID"]), api_hash = environ["API_HASH"])
+bot=Client("Automatic approve bot", bot_token = environ["BOT_API_TOKEN"], api_id = int(environ["API_ID"]), api_hash = environ["API_HASH"])
 
 @bot.on_chat_join_request()
 async def autoapprove(client: bot, message: ChatJoinRequest):
