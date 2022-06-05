@@ -1,0 +1,34 @@
+{
+    "name": "Telegram-autoapprove-Bot",
+    "description": "Automatic approve Telegram bot",
+    "repository": "https://github.com/wrwrabbit/autoapprove-tg-bot",
+    "env": {
+        "BOT_API_TOKEN": {
+            "description": "Your Bot Token From @BotFather",
+            "value": ""
+        },
+        "API_ID": {
+            "description": "api_id from my.telegram.org/apps",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "api_hash from my.telegram.org/apps",
+            "value": ""
+        },
+        "CHAT_IDS": {
+            "description": "Chat/channel id or ids",
+            "value": ""
+        }
+    },
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
+}
